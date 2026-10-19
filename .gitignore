@@ -1,0 +1,16 @@
+/build/*/obj/
+
+/build/*/build/index.html
+/build/*/build/index.js
+/build/*/build/index.data
+
+config.mk
+
+/lua-5.*
+
+*.swp
+*.swo
+*~
+.DS_Store
+
+*.zip

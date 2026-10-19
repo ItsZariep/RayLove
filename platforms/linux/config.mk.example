@@ -1,0 +1,35 @@
+# Copy to config.mk (add it to .gitignore) and edit.
+# Anything here can still be overridden: make kaios VIRT_W=300 VIRT_H=400
+
+# ---- generic ----
+
+# Default platform for plain `make build` (optional; `make kaios` also works)
+#PLATFORM = kaios
+
+# Game to build: a directory or a .love file
+GAME = games/mygame
+
+# Resolution the game was designed for (its canvas size)
+VIRT_W = 300
+VIRT_H = 400
+
+#LUA_DIR = lua-5.2.4
+
+# ---- KaiOS ----
+#KAIOS_SCREEN_W     = 240
+#KAIOS_SCREEN_H     = 320
+#KAIOS_MEM_MB       = 64     # 32 small, 64 default, 128 extreme
+#KAIOS_SHRINK_AUDIO = 1      # 0 to skip ffmpeg audio shrinking
+#KAIOS_EMSDK_ENV    = $(HOME)/emsdk-3.1.29/emsdk_env.sh
+#KAIOS_RAYLIB       = $(HOME)/.local/include/raylib/kaios/libraylib.a
+#KAIOS_RAYLIB_INC   = $(HOME)/.local/include/raylib/kaios/
+#KAIOS_SHELLFILE    = common/shell.html
+# Copy the result here after building (folder with manifest.webapp)
+KAIOS_APP_TEMPLATE = app-template
+
+# ---- Linux desktop (for testing games) ----
+#LINUX_CC           = gcc
+#LINUX_SCREEN_W     = 240    # window size, defaults to the KaiOS screen
+#LINUX_SCREEN_H     = 320
+#LINUX_RAYLIB_CFLAGS = -I/path/to/raylib/include
+#LINUX_RAYLIB_LIBS   = -L/path/to/raylib/lib -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
